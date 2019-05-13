@@ -4,13 +4,27 @@ import starGrey from "../imgs/star-grey.png";
 import "./starBar.scss";
 
 export default class StarBar extends HTMLElement {
+  get stars() {
+    return this.getAttribute('stars');
+  }
+
+  set stars(val) {
+    this.setAttribute('stars', val);
+  }
+  get total() {
+    return this.getAttribute('total');
+  }
+
+  set total(val) {
+    this.setAttribute('total', val);
+  }
+
   connectedCallback() {
-    let stars = 4;
     let content = '<div>';
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < this.stars; i++) {
       content += `<img src="${star}" class="star"/>`;
     }
-    for (let i = 0; i < 5 - stars; i++) {
+    for (let i = 0; i < this.total - this.stars; i++) {
       content += `<img src="${starGrey}" class="star-grey"/>`;
     }
     content += '<div/>';
