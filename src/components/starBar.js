@@ -35,7 +35,7 @@ export default class StarBar extends HTMLElement {
       content +=
           `<img src="${starGrey}" value="${this.stars+i}" class="star-grey"/>`;
     }
-    content += '<div/>';
+    content += '</div>';
     this.innerHTML = content;
 
     this.firstChild.childNodes.forEach((child) => {
