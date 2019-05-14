@@ -4,7 +4,7 @@ export default [
     details: '8 GB ram, 256 GB SSD',
     price: 750000,
     category: ['electronics', 'apple', 'macbook'],
-    imgUrl: 'https://via.placeholder.com/150',
+    imgUrl: 'https://via.placeholder.com/270x150',
     stars: 5,
   },
   {
@@ -12,11 +12,11 @@ export default [
     details: '16 GB ram, 500 GB SSD',
     price: 450000,
     category: ['electronics', 'apple', 'macbook'],
-    imgUrl: 'https://via.placeholder.com/150',
+    imgUrl: 'https://via.placeholder.com/270x150',
     stars: 4,
   },
   {
-    name: 'Notebook 15.6" AMD A9 12GB 1TB|15-db0005la',
+    name: 'Notebook 15.6 AMD A9 12GB 1TB',
     details: `Modelo 15-db0005la. 
     Procesador AMD A9. 
     Velocidad del procesador de 3.1 GHz. 
@@ -25,15 +25,15 @@ export default [
     Tamaño de la pantalla 15.6.`,
     price: 550000,
     category: ['electronics', 'asus', 'laptop'],
-    imgUrl: 'https://via.placeholder.com/150',
+    imgUrl: 'https://via.placeholder.com/270x150',
     stars: 5,
   },
   {
-    name: 'Notebook 14" Intel Ci5 8GB 1TB|14-ce0001la',
+    name: 'Notebook 14 Intel Ci5 8GB 1TB',
     details: '8 GB ram, 256 GB SSD',
     price: 750800,
     category: ['electronics', 'hp', 'laptop'],
-    imgUrl: 'https://via.placeholder.com/150',
+    imgUrl: 'https://via.placeholder.com/270x150',
     stars: 3,
   },
   {
@@ -41,7 +41,7 @@ export default [
     details: '8 GB ram, 256 GB SSD',
     price: 1750000,
     category: ['electronics', 'apple', 'macbook'],
-    imgUrl: 'https://via.placeholder.com/150',
+    imgUrl: 'https://via.placeholder.com/270x150',
     stars: 5,
   },
 ];

@@ -14,13 +14,21 @@ export default class Product extends HTMLElement {
   get imgUrl() {
     return this.getAttribute('imgUrl');
   }
+  get price() {
+    return this.getAttribute('price');
+  }
 
   connectedCallback() {
+    let bottom = '<div class="bottom">';
+    bottom += `<star-bar stars="${this.stars}" total="6"></star-bar>`;
+    bottom += `<p class="price">$${this.price}</p>`;
+    bottom += '</div>';
+
     let content = '<div class="product-card">';
     content += `<img class="product-image" src=${this.imgUrl}/>`;
-    content += `<div class="name">${this.name}</div>`;
-    content += `<div class="details">${this.details}</div>`;
-    content += `<star-bar stars="${this.stars}" total="6"></star-bar>`;
+    content += `<p class="name">${this.name}</p>`;
+    content += `<p class="details">${this.details}</p>`;
+    content += bottom;
     content += '</div>';
     this.innerHTML = content;
   }
