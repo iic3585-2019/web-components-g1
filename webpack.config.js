@@ -22,8 +22,8 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg|gif)$/,
-        loader: 'url-loader?limit=100000'
-      }
+        loader: 'url-loader?limit=100000',
+      },
     ],
   },
   entry: {
