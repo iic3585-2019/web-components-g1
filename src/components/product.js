@@ -41,11 +41,11 @@ export default class Product extends HTMLElement {
       clone.querySelectorAll('.price')[0].innerHTML =
           `<p class="price">$${this.price}</p>`;
       clone.querySelectorAll('.modal-background')[0].addEventListener('click',
-          () => {
+          function() {
             this.remove();
           });
       clone.querySelectorAll('.modal-content')[0].addEventListener('click',
-          (e) => {
+          function(e) {
             e.stopPropagation();
           });
       document.querySelector('body').appendChild(clone);
