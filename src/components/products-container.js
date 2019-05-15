@@ -1,4 +1,4 @@
-import allProducts from '../data/products';
+import products from '../data/products';
 import {mapProps} from '../util';
 import './products-container.scss';
 
@@ -11,12 +11,11 @@ const mapProductsToHTML = (products) => products.map((product) => (
 export default class ProductsContainer extends HTMLElement {
   constructor() {
     super();
-    this.products = allProducts;
     this.filterProductsByName = this.filterProductsByName.bind(this);
   }
 
   filterProductsByName(text) {
-    const filtered = allProducts.filter(
+    const filtered = products.filter(
         (product) => product.name.toLowerCase().includes(text.toLowerCase())
     );
     const containerHTML = this.firstChild.childNodes[1];
@@ -27,7 +26,7 @@ export default class ProductsContainer extends HTMLElement {
     let content = '<div>';
     content += '<input type="text" placeholder="Buscar" id="product-input" />';
     content += '<div id="container">';
-    content += mapProductsToHTML(this.products);
+    content += mapProductsToHTML(products);
     content += '</div>';
     content += '</div>';
     this.innerHTML = content;
