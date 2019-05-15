@@ -31,19 +31,23 @@ export default class Product extends HTMLElement {
     content += bottom;
     content += '</div>';
     this.innerHTML = content;
-    this.querySelector(".details").addEventListener('click', () => {
+    this.querySelector('.details').addEventListener('click', () => {
       const template = document.querySelector('#modal');
       const clone = document.importNode(template.content, true);
       clone.querySelectorAll('.product-name')[0].innerHTML = this.name;
       clone.querySelectorAll('.details')[0].innerHTML = this.details;
-      clone.querySelectorAll('.image')[0].innerHTML = `<img class="product-image" src=${this.imgUrl}/>`;
-      clone.querySelectorAll('.price')[0].innerHTML = `<p class="price">$${this.price}</p>`;
-      clone.querySelectorAll('.modal-background')[0].addEventListener('click', function() {
-        this.remove();
-      });
-      clone.querySelectorAll('.modal-content')[0].addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
+      clone.querySelectorAll('.image')[0].innerHTML =
+          `<img class="product-image" src=${this.imgUrl}/>`;
+      clone.querySelectorAll('.price')[0].innerHTML =
+          `<p class="price">$${this.price}</p>`;
+      clone.querySelectorAll('.modal-background')[0].addEventListener('click',
+          function() {
+            this.remove();
+          });
+      clone.querySelectorAll('.modal-content')[0].addEventListener('click',
+          function(e) {
+            e.stopPropagation();
+          });
       document.querySelector('body').appendChild(clone);
     });
   }
