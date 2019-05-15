@@ -25,7 +25,7 @@ export default class ProductsContainer extends HTMLElement {
 
   connectedCallback() {
     let content = '<div>';
-    content += '<input type="text" id="product-input" />';
+    content += '<input type="text" placeholder="Buscar" id="product-input" />';
     content += '<div id="container">';
     content += mapProductsToHTML(this.products);
     content += '</div>';
