@@ -27,7 +27,7 @@ export default class Product extends HTMLElement {
     let content = '<div class="product-card">';
     content += `<img class="product-image" src=${this.imgUrl}/>`;
     content += `<p class="name">${this.name}</p>`;
-    content += `<p class="details">Ver detalles</p>`;
+    content += `<p class="details pointer">Ver detalles</p>`;
     content += bottom;
     content += '</div>';
     this.innerHTML = content;
