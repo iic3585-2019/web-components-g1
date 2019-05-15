@@ -18,9 +18,16 @@ export default class ProductsContainer extends HTMLElement {
   filterProductsByName(text) {
     const filtered = allProducts.filter(
         (product) => product.name.toLowerCase().includes(text.toLowerCase())
-    );
+    ).map((product) => product.name);
     const containerHTML = this.firstChild.childNodes[1];
-    containerHTML.innerHTML = mapProductsToHTML(filtered);
+    containerHTML.childNodes.forEach((child) => {
+      if (filtered.includes(child.name)) {
+        child.style.display = '';
+      } else {
+        child.style.display = 'none';
+      }
+    });
+    // containerHTML.innerHTML = mapProductsToHTML(filtered);
   }
 
   connectedCallback() {
