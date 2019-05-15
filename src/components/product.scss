@@ -1,0 +1,26 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 350px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px 1px rgba(116, 115, 116, 0.34);
+  padding: 5px;
+  margin: 10px;
+}
+.product-image {
+  max-height: 150px;
+}
+.name {
+  font-weight: bold;
+} 
+.details {
+  font-size: 14px;
+  color: #616161;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: auto;
+}
