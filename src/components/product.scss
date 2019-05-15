@@ -17,6 +17,9 @@
 .details {
   font-size: 14px;
   color: #616161;
+  &.pointer {
+    cursor: pointer;
+  }
 }
 .bottom {
   display: flex;

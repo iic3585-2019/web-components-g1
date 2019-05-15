@@ -9,7 +9,16 @@ export default [
   },
   {
     name: 'MacBook Pro Touchbar 2016',
-    details: '16 GB ram, 500 GB SSD',
+    details: `
+### MacBook Pro Touchbar 2016
+
+-------
+El mejor macbook y puedes programar así
+
+\`\`\`
+sudo service express restart
+\`\`\`
+`,
     price: 450000,
     category: ['electronics', 'apple', 'macbook'],
     imgUrl: 'https://via.placeholder.com/270x150',
