@@ -1,11 +1,6 @@
-# Nervioso
-
-This repo contains the code to run the game 'Nervioso' on your browser.
-This project uses `node` and `yarn`.
-
 ## Setup
 
-Clone the repo and install the dependencies using the followinf command:
+Clone the repo and install the dependencies using the following command:
 
 ```
 yarn
@@ -22,14 +17,13 @@ Then visit `localhost:8080` and there you go!
 
 ## Code structure
 
-The main game logic lies in `src/game/index.js`. The idea is that the game class holds the 
-current state of the game and exposes an api to interact with the game. Then observes can 
-subscribe to the game state and listen to its changes.
+Hay cuatro componentes principales:
+1. `/markdown.js`: contiene la lógica para hacer un tag que permita mostrar en estilo markdown el texto que tiene adentro. Está hecho usando shadowdom para poder separar el estilo markdown del total de la página.
+1. `/starbar.js`: contiene la estructura de un tag `star-bar`, recibe el número de estrellas y el máximo de estrellas que pueden haber. Además, tiene la funcionalidad clickeable para cambiar la cantidad de estrellas seleccionadas.
+1. `/product.js`: contiene la estructura de un tag `product-card` que muestra la información de un producto. Usa el tag de `star-bar` para mostrar las estrellas del producto. También, abre un modal para mostrar el detalle del producto que puede ser escrito usando markdown. Para mostrar el estilo MD usa el tag `mark-down`. El modal está hecho en base a un template en `static/index.html`.
+1. `/products-container.js`: Es el contenedor de las tarjetas de los productos. Tiene un input que permite filtrar por nombre de producto y muestra los productos según eso.
 
-To add functionallity to the game make sure to call the `next` method of the subscriber.
+Estos 4 componentes se definen como elementos HTML customizados en `index.js` y cada uno tiene un archivo `scss` en la misma carpeta para modificar su estilo.
 
-The observers are in the `src/observers` folder. The idea behnd this observers is to listen to both dom events
-and game state changes
-
-The HTML index `stc/static/index.html` is inside the static folder since this is the
+The HTML index `static/index.html` is inside the static folder since this is the
 folder that is served alongside the webpack bundles.
