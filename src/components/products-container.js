@@ -1,5 +1,7 @@
 import allProducts from '../data/products';
 import {mapProps} from '../util';
+import './products-container.scss';
+
 
 const mapProductsToHTML = (products) => products.map((product) => (
   `<product-card ${mapProps(product)}"></product-card>`
