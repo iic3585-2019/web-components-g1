@@ -1,4 +1,6 @@
-## Setup
+En este repo se muestran distintos componentes hechos de diferentes métodos. Existe un componente markdown el cual permite escribir dentro de un tag html código en markdown el que después será rendereado con el estilo de github dentro del DOM. También se encuentra un tag de una barra de estrellas clicekable y dos componentes que funcionan en conjunto que es un componente donde se muestra un producto y el contenedor de dichos productos.
+
+## Setup and install
 
 Clone the repo and install the dependencies using the following command:
 
@@ -6,7 +8,7 @@ Clone the repo and install the dependencies using the following command:
 yarn
 ```
 
-## Run the game
+## Run the demo
 
 To run the game you have to run the following command
 ```
